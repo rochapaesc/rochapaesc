@@ -35,6 +35,12 @@
 
 <br /> -->
 
+<div align="center">
+  <img src="https://github.com/rochapaesc/rochapaesc/blob/output/github-contribution-grid-snake.svg" alt="Snake animation" />
+</div>
+
+<br />
+
 <!-- <p align="center">
     <img src="https://github-profile-trophy.vercel.app/?username=rochapaesc&theme=darkhub&row=1&no-bg=true&margin-w=15&margin-h=15" />
 </p> -->
