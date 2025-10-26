@@ -1,12 +1,15 @@
-name: Generate Snake
+name: Generate Snake 🐍
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Gera todos os dias à meia-noite
-  workflow_dispatch:     # Permite rodar manualmente
+    - cron: "0 0 * * *" 
+  workflow_dispatch:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -16,14 +19,16 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Gera animação da cobrinha 🐍
+      - name: Gera animação da cobrinha
         uses: Platane/snk@v3
         with:
           github_user_name: rochapaesc
-          outputs: dist/github-contribution-grid-snake.svg
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Publica no branch "output"
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: 🚀 Publica no branch "output"
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: dist
